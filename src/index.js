@@ -49,6 +49,12 @@ export default async function fetch(url, options_) {
 
 		// Wrap http.request into fetch
 		const send = (options.protocol === 'https:' ? https : http).request;
+
+    // Apply/expand agent
+    if (options.agent && typeof options.agent === 'object' && !(options.agent instanceof http.Agent)) {
+ 			options.agent = new protocol.Agent(options.agent)
+ 		}
+
 		const {signal} = request;
 		let response = null;
 

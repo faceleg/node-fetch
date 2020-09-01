@@ -110,7 +110,8 @@
 			"dist",
 			"@types"
 		],
-		"overrides": [{
+		"overrides": [
+			{
 				"files": "test/**/*.js",
 				"envs": [
 					"node",

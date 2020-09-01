@@ -460,7 +460,7 @@ The default values are shown after each option key.
     follow: 20,             // maximum redirect count. 0 to not follow redirect
     compress: true,         // support gzip/deflate content encoding. false to disable
     size: 0,                // maximum response body size in bytes. 0 to disable
-    agent: null,            // http(s).Agent instance or function that returns an instance (see below)
+    agent: null,            // http(s).Agent instance or options object, allows custom proxy, certificate etc.
     highWaterMark: 16384,   // the maximum number of bytes to store in the internal buffer before ceasing to read from the underlying resource.
     insecureHTTPParser: false	// Use an insecure HTTP parser that accepts invalid HTTP headers when `true`.
 }
